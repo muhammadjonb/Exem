@@ -1,0 +1,74 @@
+.hero_bg{
+    background-image: url(../../assets/images/hero_bg_img.jpg);
+    background-position: center;
+    background-size: contain;
+    margin-top: 64px;
+    width: 100vw;
+    height: 400px;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 16px;
+    h1{
+        font-size: 60px;
+        line-height: 72px;
+        margin-top: 16px;
+        color: #87CEEB;
+    }
+    p{
+        color: #A9A9A9;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .loading{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        left: 0;
+        top: 240px;
+    }
+    &_slider{
+        width: 100%;
+    }
+    &_cards{
+        padding-top: 32px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_card{
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        img{
+            width: 50%;
+        }
+        p{
+            color: #fff;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        h3{
+            font-size: 22px;
+            line-height: 26px;
+            color: #fff;
+        }
+    }
+}
+

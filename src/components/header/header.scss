@@ -1,0 +1,44 @@
+header{
+    background-color: #14161A;
+    padding: 12px 0;
+    position: fixed;
+    box-shadow: 2px 2px 5px 3px #000;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav_right{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            select{
+                background-color: transparent;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                option{
+                    cursor: pointer;
+                    color: #14161A;
+                }
+            }
+            .wotch_btn{
+                background-color: #87CEEB;
+                border: 1px solid #87CEEB;
+                border-radius: 4px;
+                font-weight: 600;
+                padding: 8px 18px;
+                line-height: 20px;
+                font-size: 14px;
+                color: #14161A;
+                &:hover{
+                    background-color: transparent;
+                    color: #87CEEB;
+                }
+            }   
+        }
+    }
+}
