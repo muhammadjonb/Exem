@@ -30,9 +30,6 @@ const WatchList = () => {
     });
   };
 
-//   const handleWithList = () => {
-//     document.querySelector(".lists").style.display = "none";
-//   };
 
   return (
     <div className="watch_list">

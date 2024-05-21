@@ -50,7 +50,7 @@ const Header = () => {
               id="wotch_btn"
               onClick={toggleSidebar}
             >
-              {sidebarOpen ? "WATCH LIST" : "HENDLE LIST"}
+              {sidebarOpen ? "HENDLE LIST" : "WATCH LIST"}
             </button>
           </div>
         </nav>
