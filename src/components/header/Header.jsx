@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { useALLDataContext } from "../../context/Context";
 import "./header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const { currency, setCurrency } = useALLDataContext();
-  const openWatchList = () =>{
-    document.querySelector(".witch_list").style.display = "flex";
-  }
+  const [sidebarOpen, setSidebarOpen] = useState(false); 
+
+
+  
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+    document.body.classList.toggle("navbar_menu");
+  };
+
   return (
     <header>
       <div className="container">
@@ -38,7 +45,13 @@ const Header = () => {
               <option value="INR">INR</option>
               <option value="EUR">EUR</option>
             </select>
-            <button className="wotch_btn" onClick={openWatchList}>WATCH LIST</button>
+            <button
+              className="wotch_btn"
+              id="wotch_btn"
+              onClick={toggleSidebar}
+            >
+              {sidebarOpen ? "WATCH LIST" : "HENDLE LIST"}
+            </button>
           </div>
         </nav>
       </div>

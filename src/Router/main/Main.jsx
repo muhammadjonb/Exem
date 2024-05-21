@@ -30,12 +30,37 @@ const Main = () => {
     (filteredData ? filteredData.length : 0) / itemsPerPage
   );
 
-  const addToWitchList = (el) =>{
-    const witchList = [];
-    const addWitchList = witchList.push(...witchList, el)
-    console.log(addWitchList);
-  }
 
+  const addToWitchList = (el) => {
+    const existingWatchlist = localStorage.getItem("watchlist");
+    if (!existingWatchlist) {
+      saveToLocalStorage("watchlist", [el]);
+    } else {
+      try {
+        const parsedWatchlist = JSON.parse(existingWatchlist);
+        const isCryptoInWatchlist = parsedWatchlist.some(
+          (item) => item.id === el.id
+        );
+        if (!isCryptoInWatchlist) {
+          const updatedWatchlist = [...parsedWatchlist, el];
+          saveToLocalStorage("watchlist", updatedWatchlist);
+        } else {
+          console.log("bor");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  const saveToLocalStorage = (key, value) => {
+    try {
+      const serializedValue = JSON.stringify(value);
+      localStorage.setItem(key, serializedValue);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <section className="sc_table">

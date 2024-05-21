@@ -1,55 +1,60 @@
-.witch_list{
+.lists{
     position: fixed;
-    right: 0;
-    top: 0;
-    width: 440px;
     background-color: #515151;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    top: 62px;
+    right: 0;
+    width: 440px;
     padding: 40px 20px;
-    flex-direction: column;
-    z-index: 11;
     display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    min-height: 100vh;
+    height: 100%;
+    z-index: 90;
     h2{
         font-size: 30px;
         line-height: 40px;
         color: #fff;
-        cursor: pointer;
+    }
+    .cards{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+        .watch_card{
+            width: 180px;
+            background-color: #14161A;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 25px;
+            padding: 16px;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            p{
+                font-size: 20px;
+                color: #fff;
+            }
+            button{
+                padding: 4px 8px;
+                border-radius: 4px;
+                border: 1px solid #FF0000;
+                background-color: #FF0000;
+                color: #fff;
+            }
+        }
     }
 }
 
-.cards{
-    padding: 40px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;    
-    .witch_card{
-        width: 180px;
+
+.navbar_menu{
+    .lists{
         display: flex;
-        flex-direction: column;
-        background-color: #14161A;
-        border-radius: 25px;
-        padding: 20px;
-        gap: 20px;
-        img{
-            width: 100%;
-        }
-        p{
-            color: #fff;
-            font-size: 16px;
-            line-height: 24px;
-            text-align: center;
-        }
-        button{
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: #FF0000;
-            border: 1px solid #FF0000;
-            color: #fff;
-        }
     }
 }
