@@ -1,7 +1,9 @@
-import './header.scss'
+import { useALLDataContext } from "../../context/Context";
+import "./header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const { currency, setCurrency } = useALLDataContext();
   return (
     <header>
       <div className="container">
@@ -23,10 +25,15 @@ const Header = () => {
             </Link>
           </div>
           <div className="nav_right">
-            <select name="price" id="price">
+            <select
+              name="price"
+              id="price"
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
+            >
               <option value="USD">USD</option>
-              <option value="RUS">RUS</option>
-              <option value="UZS">UZS</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
             </select>
             <button className="wotch_btn">WATCH LIST</button>
           </div>

@@ -78,6 +78,9 @@ const Main = () => {
                   </div>
                   <div className="tb_data_right">
                     <div className="tb_data_right_wch">
+                      <div className="icon_list">
+                        <ion-icon name="eye"></ion-icon>
+                      </div>
                       {el.price_change_percentage_24h > 0 ? (
                         <p style={{ color: "#0ECB81" }}>
                           {el.price_change_percentage_24h.toFixed(2)}%
