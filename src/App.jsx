@@ -8,13 +8,13 @@ import SinglePage from "./Router/singlePage/SinglePage";
 const App = () => {
   return (
     <ContextProvider>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sigle-page/:id" element={<SinglePage />} />
-        </Routes>
-      </Router>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sigle-page/:id" element={<SinglePage />} />
+          </Routes>
+        </Router>
     </ContextProvider>
   );
 };

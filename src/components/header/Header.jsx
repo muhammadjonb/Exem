@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const { currency, setCurrency } = useALLDataContext();
+  const openWatchList = () =>{
+    document.querySelector(".witch_list").style.display = "flex";
+  }
   return (
     <header>
       <div className="container">
@@ -35,7 +38,7 @@ const Header = () => {
               <option value="INR">INR</option>
               <option value="EUR">EUR</option>
             </select>
-            <button className="wotch_btn">WATCH LIST</button>
+            <button className="wotch_btn" onClick={openWatchList}>WATCH LIST</button>
           </div>
         </nav>
       </div>
