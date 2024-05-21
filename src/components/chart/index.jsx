@@ -8,7 +8,7 @@ export default class ApexChart extends React.Component {
       series: [
         {
           name: "XYZ MOTORS",
-          //   data: props.dates, // Correctly use the prop passed to the component
+          data: props.dates, // Correctly use the prop passed to the component
         },
       ],
       options: {

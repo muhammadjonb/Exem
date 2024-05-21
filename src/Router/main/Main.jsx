@@ -30,6 +30,11 @@ const Main = () => {
     (filteredData ? filteredData.length : 0) / itemsPerPage
   );
 
+  const witchList = (id) =>{
+    const witchData = [...id, id]
+    console.log(witchData);
+  }
+
   return (
     <section className="sc_table">
       <div className="container">
@@ -64,6 +69,7 @@ const Main = () => {
               {currentItems.map((el) => (
                 <Link
                   to={`/sigle-page/${el.id}`}
+                  onClick={witchList(el.id)}
                   key={el.id}
                   className="tb_data"
                 >
